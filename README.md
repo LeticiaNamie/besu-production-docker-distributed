@@ -1,3 +1,11 @@
+# besu-production-docker-distributed
+
+Variante distribuída baseada no repositório [besu-production-docker](https://github.com/jeffsonsousa/besu-production-docker/tree/develop) 
+
+## Diferenças em relação ao original
+
+- Docker Compose separado por tipo de nó (`docker-compose.bootnode.yaml` e `docker-compose.node.yaml`)
+
 # Hyperledger Besu - Permissioned QBFT Network for Production Networks
 
 Este guia descreve a configuração de uma rede permissionada utilizando o mecanismo de consenso QBFT (QBFT Consensus Protocol) do Hyperledger Besu, ideal para ambientes de produção.
