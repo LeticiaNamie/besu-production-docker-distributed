@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  node1:
+    image: besu-image-local:1.0
+    container_name: node1
+    network_mode: "host"
+    command: >
+      --data-path=/opt/besu/data
+      --genesis-file=/opt/besu/genesis.json
+      --rpc-http-enabled
+      --rpc-http-api=ETH,NET,QBFT,ADMIN
+      --host-allowlist="*"
+      --rpc-http-cors-origins="all"
+      --profile=ENTERPRISE
+      --metrics-enabled
+      --rpc-http-host=0.0.0.0
+      --rpc-http-api=EEA,WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PERM,QBFT
+      --rpc-ws-api=EEA,WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PERM,QBFT
+      --data-storage-format=BONSAI 
+      --tx-pool-min-gas-price=0 
+      --min-gas-price=0 
+      --rpc-ws-enabled=true 
+      --rpc-ws-port=8645 
+      --tx-pool-limit-by-account-percentage=1 
+      --tx-pool-max-size=4096 
+      --metrics-port=9545
+      --p2p-port=30303
+      --rpc-http-port=8545
+      --permissions-accounts-config-file-enabled
+      --permissions-nodes-config-file-enabled
+    volumes:
+      - ./genesis.json:/opt/besu/genesis.json
+      - ./Permissioned-Network/Node-1/data:/opt/besu/data
+
+networks:
+  default:
+    name: besu-network
+    external: true
