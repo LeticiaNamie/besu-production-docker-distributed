@@ -14,6 +14,7 @@ services:
       --rpc-http-cors-origins="all"
       --profile=ENTERPRISE
       --metrics-enabled
+      --metrics-host=0.0.0.0
       --rpc-http-host=0.0.0.0
       --rpc-http-api=EEA,WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PERM,QBFT
       --rpc-ws-api=EEA,WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PERM,QBFT
