@@ -21,8 +21,9 @@ services:
       --data-storage-format=BONSAI 
       --tx-pool-min-gas-price=0 
       --min-gas-price=0 
-      --rpc-ws-enabled=true 
-      --rpc-ws-port=8645 
+      --rpc-ws-enabled=true
+      --rpc-ws-port=8645
+      --rpc-ws-max-connections=500
       --tx-pool-limit-by-account-percentage=1 
       --tx-pool-max-size=4096 
       --metrics-port=9545
