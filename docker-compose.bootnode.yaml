@@ -26,7 +26,8 @@ services:
       --rpc-ws-enabled=true
       --rpc-ws-port=8645
       --rpc-ws-max-active-connections=500
-      --tx-pool-layer-max-capacity=25000000
+      --tx-pool-limit-by-account-percentage=1
+      --tx-pool-max-size=8192
       --metrics-port=9545
       --p2p-port=30303
       --rpc-http-port=8545
