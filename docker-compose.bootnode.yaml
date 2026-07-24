@@ -5,6 +5,8 @@ services:
     image: besu-image-local:1.0
     container_name: node1
     network_mode: "host"
+    environment:
+      - BESU_OPTS=-Xmx3g
     command: >
       --data-path=/opt/besu/data
       --genesis-file=/opt/besu/genesis.json
@@ -24,8 +26,7 @@ services:
       --rpc-ws-enabled=true
       --rpc-ws-port=8645
       --rpc-ws-max-active-connections=500
-      --tx-pool-limit-by-account-percentage=1 
-      --tx-pool-max-size=4096 
+      --tx-pool-layer-max-capacity=25000000
       --metrics-port=9545
       --p2p-port=30303
       --rpc-http-port=8545
