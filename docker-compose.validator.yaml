@@ -15,7 +15,6 @@ services:
       --rpc-http-api=ETH,NET,QBFT,ADMIN
       --host-allowlist="*"
       --rpc-http-cors-origins="all"
-      --profile=ENTERPRISE
       --metrics-enabled
       --metrics-host=0.0.0.0
       --rpc-http-host=0.0.0.0
@@ -26,8 +25,8 @@ services:
       --min-gas-price=0 
       --rpc-ws-enabled=true 
       --rpc-ws-port=8646 
-      --tx-pool-limit-by-account-percentage=1
-      --tx-pool-max-size=8192
+      --tx-pool=layered
+      --tx-pool-layer-max-capacity=25000000
       --metrics-port=9546
       --p2p-port=30304
       --rpc-http-port=8546
