@@ -27,6 +27,7 @@ services:
       --rpc-ws-max-active-connections=500
       --tx-pool=layered
       --tx-pool-layer-max-capacity=25000000
+      --tx-pool-max-future-by-sender=5000
       --metrics-port=9545
       --p2p-port=30303
       --rpc-http-port=8545
